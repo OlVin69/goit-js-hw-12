@@ -138,6 +138,7 @@ ul {
   align-items: flex-start;
   gap: 24px;
   background: #fff;
+  margin-bottom: 48px;
 }
 
 .gallery-item {
@@ -168,4 +169,41 @@ div {
 
 p {
   margin: 0;
+}
+
+.loadmore {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 125px;
+  height: 40px;
+  padding: 8px 16px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border-radius: 8px;
+  border: none;
+  background: #4e75ff;
+  cursor: pointer;
+}
+
+.loadmore:hover {
+  background-color: #6c8cfa;
+}
+
+.is-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
