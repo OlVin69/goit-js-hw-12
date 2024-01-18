@@ -3,9 +3,9 @@ import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
-import { getPhotos } from "./query";
-import { renderGallery } from "./render";
-import { scrollGallery } from "./scroll";
+import { getPhotos } from "./js/query";
+import { renderGallery } from "./js/render";
+import { scrollGallery } from "./js/scroll";
 
 const formEl = document.querySelector(".js-search-form");
 const loader = document.querySelector(".loader");
