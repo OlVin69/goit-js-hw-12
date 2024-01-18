@@ -1,0 +1,131 @@
+.gallery-section {
+  padding: 60px 0;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.search-input {
+  width: 272px;
+  height: 40px;
+  border-radius: 4px;
+  background: #fff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+}
+
+.search-input:hover {
+  border-color: #000;
+}
+.search-input:focus {
+  border-color: #4e75ff;
+  color: #000;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #808080;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.btn {
+  width: 91px;
+  height: 40px;
+  padding: 8px 16px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border-radius: 8px;
+  border: none;
+  background: #4e75ff;
+  cursor: pointer;
+  transition: background-color 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #6c8cfa;
+}
+
+.hidden {
+  display: none;
+}
+
+.gallery {
+  display: flex;
+  width: 1440px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  background: #fff;
+  margin-bottom: 48px;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+img {
+  display: block;
+  width: 360px;
+  height: 200px;
+  max-width: unset;
+  object-fit: cover;
+}
+
+.gallery-item-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadmore {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 125px;
+  height: 40px;
+  padding: 8px 16px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border-radius: 8px;
+  border: none;
+  background: #4e75ff;
+  cursor: pointer;
+  transition: background-color 250ms linear;
+}
+
+.loadmore:hover,
+.loadmore:focus {
+  background-color: #6c8cfa;
+}

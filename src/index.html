@@ -15,20 +15,21 @@
 </head>
 
 <body>
-  <section>
+  <section class="gallery-section">
     <form name="search_form" class="form js-search-form">
       <input type="text" name="search_field" placeholder="Search images..." class="search-input">
       <button type="submit" class="btn">Search</button>
     </form>
 
-    <div class="loader hidden"></div>
+
     <ul class="gallery js-gallery"></ul>
+    <div class="loader hidden"></div>
+    <div class="backdrop js-backdrop is-hidden"></div>
     <button type="button" class="loadmore js-loadmore is-hidden">Load More</button>
 
   </section>
 
-
-  <script type="module" src="./main.js"></script>
+  <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
