@@ -3,7 +3,7 @@ import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
-import { getPhotos } from "./js/query";
+import { getPhotos } from "./js/apiphoto";
 import { renderGallery } from "./js/render";
 import { scrollGallery } from "./js/scroll";
 
@@ -27,7 +27,10 @@ btnMore.addEventListener("click", loadMoreData);
 
 async function onSubmit(event) {
   event.preventDefault();
+  listEl.innerHTML = "";
+  btnMore.classList.add("is-hidden");
 
+  page = 1;
   query = event.target.elements["search_field"].value.trim();
   
   loaderPlay();
@@ -45,7 +48,7 @@ async function onSubmit(event) {
     });
   };
 
-  listEl.innerHTML = "";
+  
 
   try {
     const { data: { hits, totalHits } } = await getPhotos(query, page);
@@ -77,7 +80,12 @@ async function onSubmit(event) {
    }
 
   } catch (error) {
-    console.error(error.message);
+    iziToast.error({   title: Error,
+                        messageColor: "rgb(255, 255, 255)",
+                        backgroundColor: "red",
+                        timeout:"3000",
+                        position: "topRight",
+                });
   }
   finally { loaderStop(); }; 
 
@@ -109,7 +117,12 @@ async function loadMoreData() {
     });
     };
   } catch (error) {
-    console.error(error.message);
+    iziToast.error({   title: Error,
+                        messageColor: "rgb(255, 255, 255)",
+                        backgroundColor: "red",
+                        timeout:"3000",
+                        position: "topRight",
+                });
   }
    finally { loaderStop() };  
 };
